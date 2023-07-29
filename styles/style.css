@@ -233,48 +233,50 @@ ol {
     border-left-color: transparent;
   }
 }
-/*.spacial-controls  */
-.search-modal {
+.spacial-controls {
+  position: fixed;
+  width: 111px;
+  height: 91px;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.spacial-controls .search-switch {
+  display: block;
+  height: 100%;
+  padding-top: 30px;
+  background: #323232;
+  text-align: center;
+  cursor: pointer;
+}
+
+.search-model {
   display: none;
   position: fixed;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
+  background: #000;
   z-index: 9999;
   opacity: 0;
-  transition: opacity 300ms ease-in-out;
-  background: #000;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+  transition: opacity 0.7s ease-in-out;
 }
 
-.search-modal_shown {
-  opacity: 0.7;
-}
-
-.search-modal_opened {
-  display: flex;
-}
-
-.search-form {
-  padding: 0 15px;
-  height: 75vh;
-  opacity: 0;
-  transition: opacity 700ms ease-in-out;
-  background-color: rgba(255, 255, 255, 0.05);
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.search-form_shown {
+.search-model_revealed {
   opacity: 1;
 }
 
-.search-form__input {
+.search-model_opened {
+  display: block;
+}
+
+.search-model-form {
+  padding: 0 15px;
+}
+
+.search-model-form input {
   width: 500px;
   font-size: 40px;
   border: none;
@@ -283,7 +285,7 @@ ol {
   color: #999;
 }
 
-.search-modal__close-button {
+.search-close-switch {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -294,9 +296,7 @@ ol {
   font-size: 28px;
   line-height: 28px;
   top: 30px;
-  right: calc(50vw + 25px);
   cursor: pointer;
-  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -380,42 +380,18 @@ ol {
   top: 2px;
 }
 
-.header__buttons {
+.header__right {
   text-align: right;
   padding: 20px 0 15px;
-  position: fixed;
-  width: 111px;
-  height: 91px;
-  top: 0;
-  right: 0;
-  z-index: 999;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  gap: 30px;
-  align-items: flex-start;
 }
-
-.header__button {
-  display: block;
+.header__right a {
+  display: inline-block;
   font-size: 18px;
   color: #ffffff;
+  margin-right: 30px;
 }
-
-.header__search-button {
-  padding-top: 30px;
-  background: #323232;
-  text-align: center;
-  cursor: pointer;
-  border: none;
-  box-shadow: none;
-  height: 20px;
-  width: 20px;
-  background-size: 18px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../img/icons/search-icon.svg");
-  background-color: transparent;
+.header__right a:last-child {
+  margin-right: 0;
 }
 
 .slicknav_menu {
