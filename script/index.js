@@ -56,3 +56,9 @@ function handleEscClose(evt) {
   modalSearchElement.addEventListener('click', handleOverlayClickClose);
   closeModalButtonElement.addEventListener('click', handleCloseSearchModalClick);
   searchInputElement.addEventListener('input', handleSearchInput);
+Array.from(document.querySelectorAll('.set-bg'))
+.forEach((element) => {
+  const { setbg: src} = element.dataset;
+  element.style.backgroundImage = `url(${src})`;
+
+});
