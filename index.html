@@ -26,7 +26,7 @@
     <div id="preloder" class="preloder">
         <div class="loader"></div>
     </div>
-    
+
     <!-- Header Section Begin -->
     <header class="header">
         <div class="container">
@@ -53,10 +53,18 @@
                     </div>
                 </div>
                 <div class="col-lg-2">
-                    <div class="header__right">
-                        <a href="#" class="search-switch"><span class="icon_search"></span></a>
-                        <a href="./login.html"><span class="icon_profile"></span></a>
-                    </div>
+                    <ul class="header__buttons">
+                        <li class="header__button">
+                            <button class="header__search-button">
+                              <!--  <span class="icon_search"></span> -->
+                            </button>
+                        </li>
+                        <li class="header__button">
+                            <a href="./login.html">
+                                <span class="icon_profile"></span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div id="mobile-menu-wrap"></div>
@@ -622,17 +630,16 @@
     </footer>
 
     <!-- Search model Begin -->
-    <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch"><i class="icon_close"></i></div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Search here.....">
+    <div class="search-modal">
+            <button class="search-modal__close-button"><i class="icon_close"></i></button>
+            <form class="search-form">
+                <input class="search-form__input" type="text" id="search-input" placeholder="Search here.....">
             </form>
-        </div>
     </div>
     <!-- Search model end -->
 
     <!-- Js Plugins -->
+    <script type="module" src="./script/index.js" defer />
 </body>
 
 </html>
